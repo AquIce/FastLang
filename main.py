@@ -40,7 +40,6 @@ class Interpreter:
           output = temp[1]
           if output.startswith(self.syntax['var']) or output.startswith(self.syntax['const']):
             output = str(self.get_value(output))
-          print(output)
           self.memory['vars'][temp[0]] = eval(output)
         elif line.startswith(self.syntax['print']):
           outpt = ''

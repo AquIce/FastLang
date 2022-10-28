@@ -1,0 +1,17 @@
+$var 12
+$$const 54
+$a $var
+$b $$const
+$$c $b
+!$$c
+
+; OK
+
+<< $$_
+<< $var 
+<< $$const
+<< $a
+<< $b
+<< $var * $$const * $a * $b
+
+!fafa
